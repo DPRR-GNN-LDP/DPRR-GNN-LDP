@@ -76,6 +76,8 @@ def insert_noise_use_C_use_map(g_list, alpha, seed, apply_noise,
                                                       toc_alpha=alpha,
                                 toc_seed=seed, degree_as_tag=degree_as_tag),
                                 g_list, graph_indices))
+        
+        # raise
     return new_dataset_list
 
 

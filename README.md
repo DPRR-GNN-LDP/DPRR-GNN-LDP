@@ -1,22 +1,39 @@
-# DPRR-GNN-LDP
+# Setup
+1. Build docker
+Create docker image.
 
-This is a source code of DPRR (Degree-Preserving Randomized Response) for GNN (Graph Neural Networks).
+    ```
+     $ sudo docker-compose build 
+    ```
 
-# Installation
-You should refer to required modules and install these. 
-If you would like to use pipenv, the commands for installations are available.
+    If you would like to use dev environment, you should use below command.
 
-```
-$ pipenv --python 3
-$ pipenv lock 
-$ pipenv sync
-$ pipenv shell
-```
-(Optional) If you would like to use jupyter and visualize results, this command is available.
+    ```
+     $ sudo docker-compose -f ./docker-compose_dev.yml build
+    ```
 
-```
-$ pipenv sync --dev
-```
+2. Run docker container.
+
+    ```
+    $ sudo docker-compose up -d
+    ```
+    
+    In dev environment,
+    ```
+    $ sudo docker-compose -f ./docker-compose_dev.yml up -d
+    ```
+
+3. Down docker container.
+
+    ```
+    sudo docker-compose down
+    ```
+
+    In dev enviroment,
+
+    ```
+    sudo docker-compose -f ./docker-compose_dev.yml  down
+    ```
 
 
 # Executation
@@ -44,3 +61,4 @@ For example,
 ```
 $ tensorboard --logdir ./logs/no_noise_seed:0_alpha:0.1
 ```
+
